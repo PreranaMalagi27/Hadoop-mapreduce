@@ -1,1 +1,21 @@
 
+//First place the jar file D:\hadoop-3.1.2\share\hadoop\mapreduce
+//Starting commands
+Step 1: hdfs namenode -format
+
+//if it gives Yes or No option go to hadoop-3.1.2 folder delete data folder, and create new data folder in that create 2 folders namenode and datanode.
+And retry the above command.
+
+Step 2: start-all.cmd
+
+Step 3: hadoop fs -mkdir /input_dir2
+
+//Create a demo folder in that demo4.txt with any text in it (in same drive where hadoop is installed) and run the below command
+Step 4: hadoop fs -put D:\demo\demo4.txt /input_dir2
+
+Step 5: hadoop fs -ls /input_dir2
+
+Step 6: hadoop jar D:\hadoop-3.1.2\share\hadoop\mapreduce\CharacterCount2.jar CharCountDriver /input_dir2/demo4.txt /output_dir24
+
+Step 7: hadoop dfs -cat /output_dir24/*
+
