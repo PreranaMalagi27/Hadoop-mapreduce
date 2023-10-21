@@ -6,13 +6,15 @@ Step 1: hdfs namenode -format
 //if it gives Yes or No option go to hadoop-3.1.2 folder delete data folder, and create new data folder in that create 2 folders namenode and datanode.
 And retry the above command.
 
+Step:2 start-all.cmd
+
 //Create a demo folder in that demo4.txt with any text in it (in same drive where hadoop is installed) and run the below command
-Step 2: hadoop fs -put D:\demo\demo4.txt /input_dir
+Step 3: hadoop fs -put D:\demo\demo4.txt /input_dir
 
-Step 3: hadoop fs -ls /input_dir
+Step 4: hadoop fs -ls /input_dir
 
-Step 4: hadoop dfs -cat /input_dir/demo4.txt
+Step 5: hadoop dfs -cat /input_dir/demo4.txt
 
-Step 5: hadoop jar D:\hadoop-3.1.2\share\hadoop\mapreduce\hadoop-mapreduce-examples-3.1.2.jar wordcount /input_dir/demo4.txt /output_dir4
+Step 6: hadoop jar D:\hadoop-3.1.2\share\hadoop\mapreduce\hadoop-mapreduce-examples-3.1.2.jar wordcount /input_dir/demo4.txt /output_dir4
 
-Step 6: hadoop dfs -cat /output_dir4/*
+Step 7: hadoop dfs -cat /output_dir4/*
